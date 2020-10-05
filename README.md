@@ -18,3 +18,24 @@ This is a REST service, taking a set of boolean flags and numbers as an input, a
 - The service contains references to 3 different sets of substitutions, created through factory methods.
 - A 'SubstitutionSet' class itself contains encapsulated logic for choosing a substitution from a set, based on input parameters, and applying this substitution to the input.
 - I did my best to cover most of the logic by unit tests and coverage is 98%.
+- The application can be run in a docker container via deploy.sh script.
+
+#### Endpoints
+
+- /substitution/baseSet
+- /substitution/customSet
+- /substitution/customSet1
+
+##### Request example
+```text
+POST /substitution/baseSet
+Body:
+{
+    "a": true,
+    "b": true,
+    "c": false,
+    "d": 1.1,
+    "e": 1,
+    "f": 1
+}
+```
